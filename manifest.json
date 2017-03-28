@@ -1,16 +1,20 @@
 {
   "name": "GanoHesap",
   "version": "1.0",
-  "permissions": [ "contextMenus", "tabs" ],
+  "permissions": [ "tabs" ],
   "manifest_version": 2,
+  
+	"browser_action": {
+    "default_icon": "icon.png",
+    "default_popup": "sayfa.html",
+	"default_title": "Click here!"
+  },
+	"background" : {
+	"scripts":["background.js"]},
   "description": "Hizli ve kolay not ortalamasi hesaplama eklentisi.",
     "icons": {
     "16": "icon-16.png",
     "48": "icon-48.png",
     "128": "icon-128.png"
-  },
-  "browser_action": {
-    "default_icon": "icon.png",
-    "default_popup": "sayfa.html"
   }
 }
