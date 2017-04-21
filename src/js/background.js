@@ -2,6 +2,12 @@ chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
 
     if (request.action === "show") {
         chrome.browserAction.onClicked.addListener(function (tab) {
+
+            $.getJSON("https://raw.githubusercontent.com/cankatabaci/ChromeEklenti-v1/master/src/course_ects.json", function(json) {
+                console.log(json);
+            });
+
+
             chrome.tabs.create({'url': chrome.extension.getURL('src/html/ortalamaHesaplama.html')}, function (tab) {
                 // Tab opened.
                 console.log(tab);

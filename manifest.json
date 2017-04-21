@@ -27,8 +27,8 @@
         "https://ubs.cbu.edu.tr/*"
       ],
       "js": [
-        "src/js/content.js",
-        "src/js/jquery-3.2.1.min.js"
+        "src/js/jquery-3.2.1.min.js",
+        "src/js/content.js"
       ]
     }
   ],
