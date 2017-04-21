@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Eklenti</title>
+    <script src="jquery-3.2.1.min.js"></script>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
+          integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+            integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+            crossorigin="anonymous"></script>
+
+
+</head>
+<style>
+    body {
+        width: 500px;
+        height: 750px;
+    }
+</style>
+
+
+<body>
+
+
+<div>
+
+    <div class="clearfix rightborder_1">
+        <div class="caption contact-caption">
+            <h2>
+                <span class="green"><i class="fa fa-calculator"></i></span>
+                Ders kredileri ve harf notlarınızı seçin
+            </h2>
+        </div>
+
+        <div class="form register-form">
+
+            <div class="send_result"></div>
+
+            <form class="contact_form">
+
+                <fieldset>
+
+                    <div class="form-group">
+
+
+                        <table class="table table-hover">
+                            <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Ders adı</th>
+                                <th>Kredi</th>
+                                <th>Harf</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>
+                                    <input type="text" class="form-control col-sm-10" name="dersadi0" value="">
+                                </td>
+                                <td>
+                                    <select name="kredi0" class="form-control">
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6</option>
+                                        <option value="7">7</option>
+                                        <option value="8">8</option>
+                                        <option value="9">9</option>
+                                        <option value="10">10</option>
+                                        <option value="11">11</option>
+                                        <option value="12">12</option>
+                                    </select>
+                                </td>
+                                <td>
+                                    <select name="not0" class="form-control">
+
+                                        <option value="4.0">AA</option>
+                                        <option value="3.5">BA</option>
+                                        <option value="3.0">BB</option>
+                                        <option value="2.5">CB</option>
+                                        <option value="2.0">CC</option>
+                                        <option value="1.5">DC</option>
+                                        <option value="1.0">DD</option>
+                                        <option value="0.5">FD</option>
+                                        <option value="0.0">FF</option>
+
+                                    </select>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        <div>
+                            <input type="hidden" value="" name="harftipi">
+                        </div>
+
+                        <div class="clearfix">
+                            <input type="button" value="Geri dön" onclick="history.go( -1 );return true;"
+                                   class="btn btn-custom btn-default">
+                            <button type="submit" class="btn btn-custom btn-default">Hesapla</button>
+
+                        </div>
+
+                    </div>
+                </fieldset>
+                <input type="hidden" name="lesson" value="1">
+            </form>
+            <p><i class="fa fa-info-circle"></i> Ders adları kolay hatırlamanız içindir isterseniz hiç
+                yazmayabilirsiniz.</p>
+        </div>
+
+        <!-- .form -->
+
+
+    </div>
+
+</div>
+
+
+</body>
+<script src="background.js"></script>
+
+
+
