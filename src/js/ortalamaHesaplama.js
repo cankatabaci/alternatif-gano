@@ -54,6 +54,16 @@ function dersKredisiniGetir(all_courses, course_code) {
     return course.course_ects[0];
 }
 
+function DersEkle() {
+	$(document).ready(function (){
+		var kod = "Eklenen";
+		var name = "";
+		var id = $('not_tablosu tr:last').attr('id');
+		
+		tabloyaDersEkle(kod,name,id);
+	});
+}
+
 function tabloyaDersEkle(course_code, course_name, index) {
     let course_name_html = '<input type="text" class="form-control col-sm-10" name="dersadi' + index + '" value="' + course_name + '">';
     let course_credits_html = kredilerComboBoxOlustur(index);
