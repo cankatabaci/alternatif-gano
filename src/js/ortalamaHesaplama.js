@@ -1,6 +1,6 @@
 /*
-*
-* {
+ *
+ * {
  "course_code": "CBU 4401",
  "course_grade": "A",
  "course_name": "Girişimcilik"
@@ -13,17 +13,60 @@
  ]
  }
 
-* */
+ * */
+
+function notlarComboBoxOlustur(index) {
+    let not_cb_html = '<select name="not' + index + '" class="form-control">' +
+        ' <option value="4.0">AA</option>' +
+        '<option value="3.5">BA</option>' +
+        '<option value="3.0">BB</option>' +
+        '<option value="2.5">CB</option>' +
+        '<option value="2.0">CC</option>' +
+        '<option value="1.5">DC</option>' +
+        '<option value="1.0">DD</option>' +
+        '<option value="0.5">FD</option>' +
+        '<option value="0.0">FF</option>' +
+        '</select>';
+    return not_cb_html;
+}
+
+function kredilerComboBoxOlustur(index) {
+    let kredi_cb_html = '<select name="kredi' + index +'" class="form-control"> ';
+    for ( i= 0; i< 30; i++) {
+        kredi_cb_html += '<option value="'+ (i+1) + '">'+ (i+1) + '</option>';
+    }
+    kredi_cb_html += '</select>';
+
+    return kredi_cb_html;
+}
+
 chrome.storage.sync.get("parsed_courses", function (items) {
 
     $.getJSON("https://raw.githubusercontent.com/cankatabaci/ChromeEklenti-v1/master/src/course_ects.json", function (json) {
         let all_courses = json;
         let parsed_courses = items.parsed_courses;
 
-        // TODO: 1. Loop through all parsed courses, add a row,
-        //       2. Write course name inside "dersadi(n)" element
+        // TODO: 1. Loop through all parsed courses,  (done) add a row,
+        //       2.  (done) Write course name inside "dersadi(n)" element
         //       3. Find course credit using course code from all_courses
-        //       4. Select course credit insde "kredi(n)" element
-        //       5. Select course grade, put insie "not(n)" element
+        //       4. Select course credit (done) put inside "kredi(n)" element
+        //       5. Select course grade, (done) put insie "not(n)" element
+
+
+        for (index = 0; index < parsed_courses.length; ++index) {
+            let course_name_html = '<input type="text" class="form-control col-sm-10" name="dersadi' + index + '" value="' + parsed_courses[index].course_name + '">';
+            let course_credits_html  = kredilerComboBoxOlustur(index);
+            let course_grades_html  = notlarComboBoxOlustur(index);
+
+
+            $("#not_tablosu").find('tbody')
+                .append($('<tr>')
+                    .append($('<td>').append(parsed_courses[index].course_code))
+                    .append($('<td>').append(course_name_html))
+                    .append($('<td>').append(course_credits_html))
+                    .append($('<td>').append(course_grades_html))
+                );
+        }
+
     });
 });
