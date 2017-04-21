@@ -70,6 +70,7 @@ chrome.storage.sync.get("parsed_courses", function (items) {
                         .append($('<td>').append(course_name_html))
                         .append($('<td>').append(course_credits_html))
                         .append($('<td>').append(course_grades_html))
+						.append($('<td>').append('<a href="#" class="silinicekSatir">Sil</a>'))
                     );
 
                 $("#not" + index + " option").filter(function () { // selecting options based on its text
@@ -84,3 +85,11 @@ chrome.storage.sync.get("parsed_courses", function (items) {
 
     });
 });
+
+	$(document).ready(function() {  
+		$('#not_tablosu').on('click','.silinicekSatir', function (){  
+			if (confirm('Dersi Silmek İstediğinizden Emin Misiniz?')){  
+			$(this).parent('td').parent('tr').remove();  
+			}  
+		});  
+	});  
