@@ -41,6 +41,22 @@ function kredilerComboBoxOlustur(index) {
     return kredi_cb_html;
 }
 
+function dersKredisiniGetir(all_courses, course_code) {
+    let course = all_courses.find(function (course) {
+        return course.course_code === course_code;
+    });
+    if (course) {
+        console.log("course ects");
+        console.log(course.course_ects[0]);
+    } else {
+        console.log("course code");
+        console.log(course_code);
+    }
+
+
+    return course.course_ects[0];
+}
+
 let VALID_GRADES = ["AA", "BA", "BB", "CB", "CC", "DC", "DD", "FD", "FF"];
 
 chrome.storage.sync.get("parsed_courses", function (items) {
@@ -62,7 +78,10 @@ chrome.storage.sync.get("parsed_courses", function (items) {
                 let course_name_html = '<input type="text" class="form-control col-sm-10" name="dersadi' + index + '" value="' + parsed_courses[index].course_name + '">';
                 let course_credits_html = kredilerComboBoxOlustur(index);
                 let course_grades_html = notlarComboBoxOlustur(index);
+                let course_credit = dersKredisiniGetir(all_courses, parsed_courses[index].course_code);
 
+                console.log("course_credit");
+                console.log(course_credit);
 
                 $("#not_tablosu").find('tbody')
                     .append($('<tr>')
@@ -73,14 +92,18 @@ chrome.storage.sync.get("parsed_courses", function (items) {
 						.append($('<td>').append('<a href="#" class="silinicekSatir">Sil</a>'))
                     );
 
-                $("#not" + index + " option").filter(function () { // selecting options based on its text
+                $("#not" + index + " option").filter(function () { // selecting grade options based on its text
                     return $(this).text() === parsed_courses[index].course_grade;
                 }).prop("selected", true);
+
+                $("#kredi" + index + " option").filter(function () { // selecting credits options based on its text
+                    return $(this).text() === course_credit.toString();
+                }).prop("selected", true);
+
+
             } else {
                 console.log(parsed_courses[index].course_grade);
             }
-
-
         }
 
     });
