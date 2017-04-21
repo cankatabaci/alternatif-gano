@@ -45,10 +45,7 @@ function dersKredisiniGetir(all_courses, course_code) {
     let course = all_courses.find(function (course) {
         return course.course_code === course_code;
     });
-    if (course) {
-        console.log("course ects");
-        console.log(course.course_ects[0]);
-    } else {
+    if (course === undefined) {
         console.log("course code");
         console.log(course_code);
     }
@@ -57,6 +54,21 @@ function dersKredisiniGetir(all_courses, course_code) {
     return course.course_ects[0];
 }
 
+function tabloyaDersEkle(course_code, course_name, index) {
+    let course_name_html = '<input type="text" class="form-control col-sm-10" name="dersadi' + index + '" value="' + course_name + '">';
+    let course_credits_html = kredilerComboBoxOlustur(index);
+    let course_grades_html = notlarComboBoxOlustur(index);
+
+
+    $("#not_tablosu").find('tbody')
+        .append($('<tr>')
+            .append($('<td>').append(course_code))
+            .append($('<td>').append(course_name_html))
+            .append($('<td>').append(course_credits_html))
+            .append($('<td>').append(course_grades_html))
+            .append($('<td>').append('<a href="#" class="silinicekSatir">Sil</a>'))
+        );
+}
 let VALID_GRADES = ["AA", "BA", "BB", "CB", "CC", "DC", "DD", "FD", "FF"];
 
 chrome.storage.sync.get("parsed_courses", function (items) {
@@ -65,32 +77,15 @@ chrome.storage.sync.get("parsed_courses", function (items) {
         let all_courses = json;
         let parsed_courses = items.parsed_courses;
 
-        // TODO: 1. Loop through all parsed courses,  (done) add a row,
-        //       2.  (done) Write course name inside "dersadi(n)" element
-        //       3. Find course credit using course code from all_courses
-        //       4. Select course credit (done) put inside "kredi(n)" element
-        //       5. (done) Select course grade, (done) put insie "not(n)" element
-
-
         for (index = 0; index < parsed_courses.length; ++index) {
 
             if (VALID_GRADES.includes(parsed_courses[index].course_grade.toString()) || parsed_courses[index].course_grade.toString() === "A") {
-                let course_name_html = '<input type="text" class="form-control col-sm-10" name="dersadi' + index + '" value="' + parsed_courses[index].course_name + '">';
-                let course_credits_html = kredilerComboBoxOlustur(index);
-                let course_grades_html = notlarComboBoxOlustur(index);
-                let course_credit = dersKredisiniGetir(all_courses, parsed_courses[index].course_code);
 
-                console.log("course_credit");
-                console.log(course_credit);
+                let course_code = parsed_courses[index].course_code;
+                let course_name = parsed_courses[index].course_name;
+                tabloyaDersEkle(course_code, course_name, index);
 
-                $("#not_tablosu").find('tbody')
-                    .append($('<tr>')
-                        .append($('<td>').append(parsed_courses[index].course_code))
-                        .append($('<td>').append(course_name_html))
-                        .append($('<td>').append(course_credits_html))
-                        .append($('<td>').append(course_grades_html))
-						.append($('<td>').append('<a href="#" class="silinicekSatir">Sil</a>'))
-                    );
+                let course_credit = dersKredisiniGetir(all_courses, course_code);
 
                 $("#not" + index + " option").filter(function () { // selecting grade options based on its text
                     return $(this).text() === parsed_courses[index].course_grade;
@@ -109,10 +104,10 @@ chrome.storage.sync.get("parsed_courses", function (items) {
     });
 });
 
-	$(document).ready(function() {  
-		$('#not_tablosu').on('click','.silinicekSatir', function (){  
-			if (confirm('Dersi Silmek İstediğinizden Emin Misiniz?')){  
-			$(this).parent('td').parent('tr').remove();  
-			}  
-		});  
-	});  
+$(document).ready(function () {
+    $('#not_tablosu').on('click', '.silinicekSatir', function () {
+        if (confirm('Dersi Silmek İstediğinizden Emin Misiniz?')) {
+            $(this).parent('td').parent('tr').remove();
+        }
+    });
+});
