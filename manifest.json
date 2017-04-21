@@ -1,19 +1,15 @@
 {
   "manifest_version": 2,
-
   "name": "Alternatif GANO",
   "description": "Hizli ve kolay genel ağırlıklı not ortalamasi hesaplama eklentisi.",
   "version": "0.1",
-
   "icons": {
     "16": "icons/icon-16.png",
     "48": "icons/icon-48.png",
     "128": "icons/icon-128.png"
   },
-
   "browser_action": {
     "default_icon": "icons/icon.png",
-    // "default_popup": "src/html/ortalamaHesaplama.html",
     "default_title": "Ortalama Hesapla"
   },
 
@@ -24,6 +20,18 @@
     ],
     "persistent": false
   },
+
+  "content_scripts": [
+    {
+      "matches": [
+        "https://ubs.cbu.edu.tr/*"
+      ],
+      "js": [
+        "src/js/content.js",
+        "src/js/jquery-3.2.1.min.js"
+      ]
+    }
+  ],
 
   "permissions": [
     "tabs"

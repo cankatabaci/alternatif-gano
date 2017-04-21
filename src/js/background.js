@@ -1,8 +1,13 @@
-chrome.browserAction.onClicked.addListener(function (tab) {
-    chrome.tabs.create({'url': chrome.extension.getURL('src/html/ortalamaHesaplama.html')}, function (tab) {
-        // Tab opened.
-        console.log(tab);
-    });
+chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
+
+    if (request.action === "show") {
+        chrome.browserAction.onClicked.addListener(function (tab) {
+            chrome.tabs.create({'url': chrome.extension.getURL('src/html/ortalamaHesaplama.html')}, function (tab) {
+                // Tab opened.
+                console.log(tab);
+            });
+        });
+    }
 });
 
 
