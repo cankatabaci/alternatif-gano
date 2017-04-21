@@ -544,6 +544,12 @@
         "course_ects": [
             5
         ]
+    },
+    {
+        "course_code": "YZM 2104",
+        "course_ects": [
+            6
+        ]
     }
 
 ]
