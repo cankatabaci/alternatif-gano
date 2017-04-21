@@ -15,66 +15,56 @@
     <!-- Latest compiled and minified JavaScript -->
     <script src="bootstrap/js/bootstrap.min.js"></script>
 
-	<style>
-.navbar {
-  overflow: hidden;
-   background-color: lightgrey;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index:1;
-}
-.main {
-  padding: 16px;
-  margin-top: 100px;
-  height: 1500px;
-}
+    <style>
+        .navbar {
+            overflow: hidden;
+            background-color: lightgrey;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1;
+        }
 
-	</style>
-	
+        .main {
+            padding: 16px;
+            margin-top: 100px;
+            height: 1500px;
+        }
+
+    </style>
+
 </head>
 
 <body>
-<!-- 
-<div class="header">
 <div class="navbar">
-	<nav class="navbar navbar-default">
-		<div class="container-fluid">
-			<div class="navbar-header">
-				<a class="navbar-brand">GanoHesaplayıcı</a>
-			</div>
-			<ul class="nav navbar-nav">
-				<li><a>GANO</a></li>
-			</ul>
-		</div>
-	</nav>
-	</div>
-</div> -->
-<div class="navbar" >
-  <a class="navbar-brand" href="#">GanoHesaplayıcı</a>
-  <a class="navbar-brand" href="#">GANO</a>
+    <a class="navbar-brand">GanoHesaplayıcı</a>
+    <a class="navbar-brand">GANO*: </a>
+    <a class="navbar-brand" id="gano"></a>
+    <a class="navbar-brand">AKTS**: </a>
+    <a class="navbar-brand" id="akts"></a>
+
 </div>
 
 <div class="main">
 
     <div class="clearfix rightborder_1">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-6">
-					<div class="caption contact-caption">
-						<h2>
-							<span class="green"><i class="fa fa-calculator"></i></span>
-								Ders kredileri ve harf notlarınızı seçin
-						</h2>
-					</div>
-				</div>
-				<div class="col-md-6">
-				<h2>
-				<input  class="btn btn-default"  id="btn" type="button" value="Ders Ekle">
-				<h2>
-				</div>
-			</div>
-		</div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="caption contact-caption">
+                        <h2>
+                            <span class="green"><i class="fa fa-calculator"></i></span>
+                            Ders kredileri ve harf notlarınızı seçin
+                        </h2>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <h2>
+                        <input class="btn btn-default" id="btn" type="button" value="Ders Ekle">
+                        <h2>
+                </div>
+            </div>
+        </div>
 
         <div class="form register-form">
 
@@ -94,7 +84,7 @@
                                 <th>Ders Adı</th>
                                 <th>Kredi</th>
                                 <th>Harf</th>
-								<th>Sil</th>
+                                <th>Sil</th>
                             </tr>
                             </thead>
                             <tbody>

@@ -36,11 +36,6 @@ function dersKredisiniGetir(all_courses, course_code) {
     return course.course_ects[0];
 }
 
-$(document).ready(function () {
-
-});
-
-
 function tabloyaDersEkle(course_code, course_name, index) {
     let course_name_html = '<input type="text" class="form-control col-sm-10" name="dersadi' + index + '" value="' + course_name + '">';
     let course_credits_html = kredilerComboBoxOlustur(index);
@@ -57,6 +52,49 @@ function tabloyaDersEkle(course_code, course_name, index) {
         );
 }
 let VALID_GRADES = ["AA", "BA", "BB", "CB", "CC", "DC", "DD", "FD", "FF"];
+
+function ganoHesaplaYazdir() {
+    let not_kredi_dict = {};
+    $("tr").each(function () {
+        let id = $(this).attr('id');
+        let not = $("#not" + id + " option:selected").val();
+        let kredi = $("#kredi" + id + " option:selected").val();
+
+        if (not !== "Seçiniz") {
+            not = parseFloat(not);
+            if (not_kredi_dict[not]) {
+                not_kredi_dict[not] = not_kredi_dict[not] + parseInt(kredi);
+            } else {
+                not_kredi_dict[not] = parseInt(kredi);
+            }
+        }
+    });
+
+    delete not_kredi_dict['NaN'];
+    console.log(not_kredi_dict);
+
+    let tamamlananKredi = 0;
+    let gano = 0.0;
+
+    for (let not in not_kredi_dict) {
+        let kredi = parseInt(not_kredi_dict[not]);
+        tamamlananKredi = tamamlananKredi + kredi;
+    }
+    console.log("tamamlananKredi: " + tamamlananKredi);
+
+
+    for (let not in not_kredi_dict) {
+        let kredi = parseInt(not_kredi_dict[not]);
+        gano = gano + kredi * not;
+    }
+    gano = gano / tamamlananKredi;
+
+    gano = parseFloat(gano).toFixed(2);
+
+    console.log(gano);
+    $("#gano").text(gano);
+    $("#akts").text(tamamlananKredi);
+}
 
 chrome.storage.sync.get("parsed_courses", function (items) {
 
@@ -82,6 +120,7 @@ chrome.storage.sync.get("parsed_courses", function (items) {
                     return $(this).text() === course_credit.toString();
                 }).prop("selected", true);
 
+                ganoHesaplaYazdir();
             } else {
                 console.log(parsed_courses[index].course_grade);
             }
@@ -91,52 +130,16 @@ chrome.storage.sync.get("parsed_courses", function (items) {
 });
 
 $(document).ready(function () {
+
     $('#not_tablosu').on('click', 'select', function () {
-        let not_kredi_dict = {};
-        $("tr").each(function () {
-            let id = $(this).attr('id');
-            let not = $("#not" + id + " option:selected").val();
-            let kredi = $("#kredi" + id + " option:selected").val();
-
-            if (not !== "Seçiniz") {
-                not = parseFloat(not);
-                if (not_kredi_dict[not]) {
-                    not_kredi_dict[not] = not_kredi_dict[not] + parseInt(kredi);
-                } else {
-                    not_kredi_dict[not] = parseInt(kredi);
-                }
-            }
-        });
-
-        delete not_kredi_dict['NaN'];
-        console.log(not_kredi_dict);
-
-        let tamamlananKredi = 0;
-        let gano = 0.0;
-
-        for (let not in not_kredi_dict) {
-            let kredi = parseInt(not_kredi_dict[not]);
-            tamamlananKredi = tamamlananKredi + kredi;
-        }
-        console.log("tamamlananKredi: " + tamamlananKredi);
-
-
-        for (let not in not_kredi_dict) {
-            let kredi = parseInt(not_kredi_dict[not]);
-            gano = gano + kredi * not;
-        }
-        gano = gano / tamamlananKredi;
-
-        gano = parseFloat(gano).toFixed(2);
-
-        console.log(gano);
-
+        ganoHesaplaYazdir();
     });
 
 
     $('#not_tablosu').on('click', '.silinicekSatir', function () {
         if (confirm('Dersi Silmek İstediğinizden Emin Misiniz?')) {
             $(this).parent('td').parent('tr').remove();
+            ganoHesaplaYazdir();
         }
     });
 
