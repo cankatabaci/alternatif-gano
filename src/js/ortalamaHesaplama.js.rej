@@ -1,0 +1,13 @@
+diff a/src/js/ortalamaHesaplama.js b/src/js/ortalamaHesaplama.js	(rejected hunks)
+@@ -55,7 +55,11 @@
+  
+  
+      $("#not_tablosu").find('tbody')
+++<<<<<<< Updated upstream
+ +        .append($('<tr id="' + index +  '">')
+++=======
++         .append($('<tr id="' + index + '">')
+++>>>>>>> Stashed changes
+              .append($('<td>').append(course_code))
+              .append($('<td>').append(course_name_html))
+              .append($('<td>').append(course_credits_html))

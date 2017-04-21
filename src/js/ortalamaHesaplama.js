@@ -1,20 +1,3 @@
-/*
- *
- * {
- "course_code": "CBU 4401",
- "course_grade": "A",
- "course_name": "Girişimcilik"
- }
-
- {
- "course_code": "FIZ 1301",
- "course_ects": [
- 5
- ]
- }
-
- * */
-
 function notlarComboBoxOlustur(index) {
     let not_cb_html = '<select id="not' + index + '" class="form-control">' +
         '<option >Seçiniz</option>' +
@@ -50,20 +33,12 @@ function dersKredisiniGetir(all_courses, course_code) {
         console.log(course_code);
     }
 
-
     return course.course_ects[0];
 }
 
-$(document).ready(function() {
-  $('#btn').click(function() {
-    		var kod = "Eklenen";
-		var name = "";
-		var id = $('#not_tablosu tr:last').attr('id');
-		
-		tabloyaDersEkle(kod,name,id+1);
-		alert("Yeni Ders Satırı Eklenmiştir");
-  });
-}); 
+$(document).ready(function () {
+
+});
 
 
 function tabloyaDersEkle(course_code, course_name, index) {
@@ -73,7 +48,7 @@ function tabloyaDersEkle(course_code, course_name, index) {
 
 
     $("#not_tablosu").find('tbody')
-        .append($('<tr id="' + index +  '">')
+        .append($('<tr id="' + index + '">')
             .append($('<td>').append(course_code))
             .append($('<td>').append(course_name_html))
             .append($('<td>').append(course_credits_html))
@@ -107,7 +82,6 @@ chrome.storage.sync.get("parsed_courses", function (items) {
                     return $(this).text() === course_credit.toString();
                 }).prop("selected", true);
 
-
             } else {
                 console.log(parsed_courses[index].course_grade);
             }
@@ -117,9 +91,62 @@ chrome.storage.sync.get("parsed_courses", function (items) {
 });
 
 $(document).ready(function () {
+    $('#not_tablosu').on('click', 'select', function () {
+        let not_kredi_dict = {};
+        $("tr").each(function () {
+            let id = $(this).attr('id');
+            let not = $("#not" + id + " option:selected").val();
+            let kredi = $("#kredi" + id + " option:selected").val();
+
+            if (not !== "Seçiniz") {
+                not = parseFloat(not);
+                if (not_kredi_dict[not]) {
+                    not_kredi_dict[not] = not_kredi_dict[not] + parseInt(kredi);
+                } else {
+                    not_kredi_dict[not] = parseInt(kredi);
+                }
+            }
+        });
+
+        delete not_kredi_dict['NaN'];
+        console.log(not_kredi_dict);
+
+        let tamamlananKredi = 0;
+        let gano = 0.0;
+
+        for (let not in not_kredi_dict) {
+            let kredi = parseInt(not_kredi_dict[not]);
+            tamamlananKredi = tamamlananKredi + kredi;
+        }
+        console.log("tamamlananKredi: " + tamamlananKredi);
+
+
+        for (let not in not_kredi_dict) {
+            let kredi = parseInt(not_kredi_dict[not]);
+            gano = gano + kredi * not;
+        }
+        gano = gano / tamamlananKredi;
+
+        gano = parseFloat(gano).toFixed(2);
+
+        console.log(gano);
+
+    });
+
+
     $('#not_tablosu').on('click', '.silinicekSatir', function () {
         if (confirm('Dersi Silmek İstediğinizden Emin Misiniz?')) {
             $(this).parent('td').parent('tr').remove();
         }
     });
+
+    $('#btn').click(function () {
+        let kod = "Eklenen";
+        let name = "";
+        let id = $('#not_tablosu tr:last').attr('id');
+
+        tabloyaDersEkle(kod, name, id + 1);
+        alert("Yeni Ders Satırı Eklenmiştir");
+    });
+
 });
