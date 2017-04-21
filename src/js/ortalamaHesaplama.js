@@ -29,8 +29,7 @@ function dersKredisiniGetir(all_courses, course_code) {
         return course.course_code === course_code;
     });
     if (course === undefined) {
-        console.log("course code");
-        console.log(course_code);
+        alert("course_ects.json'da bulunamayan ders: " + course_code);
     }
 
     return course.course_ects[0];
@@ -71,7 +70,6 @@ function ganoHesaplaYazdir() {
     });
 
     delete not_kredi_dict['NaN'];
-    console.log(not_kredi_dict);
 
     let tamamlananKredi = 0;
     let gano = 0.0;
@@ -80,7 +78,6 @@ function ganoHesaplaYazdir() {
         let kredi = parseInt(not_kredi_dict[not]);
         tamamlananKredi = tamamlananKredi + kredi;
     }
-    console.log("tamamlananKredi: " + tamamlananKredi);
 
 
     for (let not in not_kredi_dict) {
@@ -88,10 +85,8 @@ function ganoHesaplaYazdir() {
         gano = gano + kredi * not;
     }
     gano = gano / tamamlananKredi;
-
     gano = parseFloat(gano).toFixed(2);
 
-    console.log(gano);
     $("#gano").text(gano);
     $("#akts").text(tamamlananKredi);
 }
