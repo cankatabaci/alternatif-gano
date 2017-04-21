@@ -545,6 +545,12 @@
             5
         ]
     },
+	    {
+        "course_code": "SSD 2203",
+        "course_ects": [
+            2
+        ]
+    },
     {
         "course_code": "YZM 2104",
         "course_ects": [
