@@ -12,15 +12,12 @@
     "default_icon": "icons/icon.png",
     "default_title": "Ortalama Hesapla"
   },
-
   "background": {
     "scripts": [
       "src/js/jquery-3.2.1.min.js",
       "src/js/background.js"
-    ],
-    "persistent": false
+    ]
   },
-
   "content_scripts": [
     {
       "matches": [
@@ -33,7 +30,6 @@
       ]
     }
   ],
-
   "permissions": [
     "tabs",
     "storage"

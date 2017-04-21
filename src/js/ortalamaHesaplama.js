@@ -53,12 +53,12 @@ chrome.storage.sync.get("parsed_courses", function (items) {
         //       2.  (done) Write course name inside "dersadi(n)" element
         //       3. Find course credit using course code from all_courses
         //       4. Select course credit (done) put inside "kredi(n)" element
-        //       5. Select course grade, (done) put insie "not(n)" element
+        //       5. (done) Select course grade, (done) put insie "not(n)" element
 
 
         for (index = 0; index < parsed_courses.length; ++index) {
 
-            if (VALID_GRADES.includes(parsed_courses[index].course_grade.toString())  || parsed_courses[index].course_grade.toString() ==="A" ) {
+            if (VALID_GRADES.includes(parsed_courses[index].course_grade.toString()) || parsed_courses[index].course_grade.toString() === "A") {
                 let course_name_html = '<input type="text" class="form-control col-sm-10" name="dersadi' + index + '" value="' + parsed_courses[index].course_name + '">';
                 let course_credits_html = kredilerComboBoxOlustur(index);
                 let course_grades_html = notlarComboBoxOlustur(index);
@@ -72,7 +72,7 @@ chrome.storage.sync.get("parsed_courses", function (items) {
                         .append($('<td>').append(course_grades_html))
                     );
 
-                $("#not" + index + " option").filter(function () {
+                $("#not" + index + " option").filter(function () { // selecting options based on its text
                     return $(this).text() === parsed_courses[index].course_grade;
                 }).prop("selected", true);
             } else {
