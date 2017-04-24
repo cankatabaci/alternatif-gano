@@ -1,4 +1,4 @@
-function notlarComboBoxOlustur(index) {
+﻿function notlarComboBoxOlustur(index) {
     let not_cb_html = '<select id="not' + index + '" class="form-control">' +
         '<option >Seçiniz</option>' +
         '<option value="4.0">AA</option>' +
@@ -91,6 +91,9 @@ function ganoHesaplaYazdir() {
     $("#akts").text(tamamlananKredi);
 }
 
+
+
+
 chrome.storage.sync.get("parsed_courses", function (items) {
 
     $.getJSON("https://raw.githubusercontent.com/cankatabaci/ChromeEklenti-v1/master/src/course_ects.json", function (json) {
@@ -148,3 +151,4 @@ $(document).ready(function () {
     });
 
 });
+
