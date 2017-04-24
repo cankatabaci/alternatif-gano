@@ -92,8 +92,6 @@ function ganoHesaplaYazdir() {
 }
 
 
-
-
 chrome.storage.sync.get("parsed_courses", function (items) {
 
     $.getJSON("https://raw.githubusercontent.com/cankatabaci/ChromeEklenti-v1/master/src/course_ects.json", function (json) {
@@ -127,12 +125,9 @@ chrome.storage.sync.get("parsed_courses", function (items) {
     });
 });
 
-function satirdakiDersAdiniGetirme(satirID)
-{
-	var degisken = "dersadi"+satirID;
-	var dersAd = $("#"+degisken).val();
-	
-	return dersAd;
+function satirdakiDersAdiniGetirme(satirID) {
+    let degisken = "dersadi" + satirID;
+    return $("#" + degisken).val();
 }
 
 $(document).ready(function () {
@@ -143,9 +138,9 @@ $(document).ready(function () {
 
 
     $('#not_tablosu').on('click', '.silinicekSatir', function () {
-		var aktif = $(this);
-		var satirID = aktif.closest("tr").attr('id');
-		var dersAd = satirdakiDersAdiniGetirme(satirID);
+        let aktif = $(this);
+        let satirID = aktif.closest("tr").attr('id');
+        let dersAd = satirdakiDersAdiniGetirme(satirID);
         if (confirm(dersAd + ' Dersini Silmek İstediğinizden Emin Misiniz?')) {
             $(this).parent('td').parent('tr').remove();
             ganoHesaplaYazdir();
@@ -159,10 +154,11 @@ $(document).ready(function () {
 
         tabloyaDersEkle(kod, name, id + 1);
         alert("Yeni Ders Satırı Eklenmiştir");
-        $("html, body").animate({ scrollTop: $(document).height()-$(window).height() });    }); //Scrolls to bottom. 
-	
-	$('#yenile').click(function(){
-		location.reload();
-	});
+        $("html, body").animate({scrollTop: $(document).height() - $(window).height()});//Scrolls to bottom.
+    }); 
+
+    $('#yenile').click(function () {
+        location.reload();
+    });
 
 });

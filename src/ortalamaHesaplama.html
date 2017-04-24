@@ -16,14 +16,15 @@
     <script src="bootstrap/js/bootstrap.min.js"></script>
 
     <style>
-		body{
-			background: url(http://ubs.cbu.edu.tr/images/bg-tulip.png) no-repeat center center fixed;
-			color: white;
+        body {
+            background: url(http://ubs.cbu.edu.tr/images/bg-tulip.png) no-repeat center center fixed;
+            color: white;
             -webkit-background-size: cover;
             -moz-background-size: cover;
             -o-background-size: cover;
             background-size: cover;
-		}
+        }
+
         .navbar {
             overflow: hidden;
             background-color: lightgrey;
@@ -39,24 +40,27 @@
             height: 1500px;
 
         }
-		.table{
-		color: white;
-		}
-		.silinicekSatir{
-		color: black;
-		}
-		.contact_form{
-			margin:0px auto; 
-			width:1140px;
-			position: relative;
-			display: block;
-			padding-right: 15px;
-			padding-left: 15px;
-		}
-		
-		.table-hover > tbody > tr:hover {
-		background-color: rgba(255,255,255,0.6);
-}
+
+        .table {
+            color: white;
+        }
+
+        .silinicekSatir {
+            color: black;
+        }
+
+        .contact_form {
+            margin: 0px auto;
+            width: 1140px;
+            position: relative;
+            display: block;
+            padding-right: 15px;
+            padding-left: 15px;
+        }
+
+        .table-hover > tbody > tr:hover {
+            background-color: rgba(255, 255, 255, 0.6);
+        }
     </style>
 
 </head>
@@ -87,7 +91,7 @@
                 <div class="col-md-6">
                     <h2>
                         <input class="btn btn-default" id="btn" type="button" value="Ders Ekle">
-						<input class="btn btn-default" id="yenile" type="button" value="Yenile" />
+                        <input class="btn btn-default" id="yenile" type="button" value="Yenile"/>
                         <h2>
                 </div>
             </div>
@@ -111,7 +115,7 @@
                                 <th>Ders Adı</th>
                                 <th>Kredi</th>
                                 <th>Harf</th>
-                                <th>Sil</th>
+                                <th></th>
                             </tr>
                             </thead>
                             <tbody>
@@ -129,8 +133,10 @@
                 </fieldset>
                 <input type="hidden" name="lesson" value="1">
             </form>
-            <p><i class="fa fa-info-circle"></i> Ders adları kolay hatırlamanız içindir isterseniz hiç
-                yazmayabilirsiniz.</p>
+            <p><i class="fa fa-info-circle"></i> * Bu eklenti ile hesaplanan GANO resmi bir değer taşımamaktadır. Doğru
+                GANO bilginizi UBS üzerinden öğreniniz.</p>
+            <p><i class="fa fa-info-circle"></i> ** GANO hesabına katılan (muaf olunanlar çıkarılmıştır.) toplam AKTS
+                sayısını göstermektedir. Kesin bilgiler için UBS üzerinden kontrolleriniz gerçekleştiriniz. </p>
         </div>
 
         <!-- .form -->
