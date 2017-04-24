@@ -15,7 +15,7 @@ $(function () {
 
     });
 
-    /*courses = courses.reduce(function (field, e1) {
+    courses = courses.reduce(function (field, e1) {
         let matches = field.filter(function (e2) {
             return e1.course_code === e2.course_code
         });
@@ -23,7 +23,7 @@ $(function () {
             field.push(e1);
         }
         return field;
-    }, []);*/
+    }, []);
 
 
 
