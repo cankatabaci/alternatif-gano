@@ -2,7 +2,7 @@
   "manifest_version": 2,
   "name": "Alternatif GANO",
   "description": "Hizli ve kolay genel ağırlıklı not ortalamasi hesaplama eklentisi.",
-  "version": "0.1",
+  "version": "0.2",
   "icons": {
     "16": "icons/icon-16.png",
     "48": "icons/icon-48.png",
@@ -16,12 +16,13 @@
     "scripts": [
       "src/js/jquery-3.2.1.min.js",
       "src/js/background.js"
-    ]
+    ],
+    "persistent": false
   },
   "content_scripts": [
     {
       "matches": [
-        "https://ubs.cbu.edu.tr/AIS/Student/Info/Information/Index",
+        "https://ubs.cbu.edu.tr/*AIS/Student/Info/Information/Index*",
         "*://*/src/ortalamaHesaplama.html"
       ],
       "js": [

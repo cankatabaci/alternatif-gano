@@ -159,7 +159,7 @@ $(document).ready(function () {
 
         tabloyaDersEkle(kod, name, id + 1);
         alert("Yeni Ders Satırı Eklenmiştir");
-    });
+        $("html, body").animate({ scrollTop: $(document).height()-$(window).height() });    }); //Scrolls to bottom. 
 	
 	$('#yenile').click(function(){
 		location.reload();
