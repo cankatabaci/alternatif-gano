@@ -30,6 +30,7 @@ function dersKredisiniGetir(all_courses, course_code) {
     });
     if (course === undefined) {
         alert("course_ects.json'da bulunamayan ders: " + course_code);
+        console.log("Bunulanamayan ders: [" + course_code + "]");
     }
 
     return course.course_ects[0];
