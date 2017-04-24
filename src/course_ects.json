@@ -556,6 +556,12 @@
         "course_ects": [
             6
         ]
+    },
+    {
+        "course_code": "SSD 2214",
+        "course_ects": [
+            2
+        ]
     }
 
 ]
