@@ -36,7 +36,7 @@ function dersKredisiniGetir(all_courses, course_code) {
 }
 
 function tabloyaDersEkle(course_code, course_name, index) {
-    let course_name_html = '<input type="text" class="form-control col-sm-10" name="dersadi' + index + '" value="' + course_name + '">';
+    let course_name_html = '<input type="text" class="form-control col-sm-10" id="dersadi' + index + '" value="' + course_name + '">';
     let course_credits_html = kredilerComboBoxOlustur(index);
     let course_grades_html = notlarComboBoxOlustur(index);
 
@@ -127,6 +127,14 @@ chrome.storage.sync.get("parsed_courses", function (items) {
     });
 });
 
+function satirdakiDersAdiniGetirme(satirID)
+{
+	var degisken = "dersadi"+satirID;
+	var dersAd = $("#"+degisken).val();
+	
+	return dersAd;
+}
+
 $(document).ready(function () {
 
     $('#not_tablosu').on('click', 'select', function () {
@@ -135,7 +143,10 @@ $(document).ready(function () {
 
 
     $('#not_tablosu').on('click', '.silinicekSatir', function () {
-        if (confirm('Dersi Silmek İstediğinizden Emin Misiniz?')) {
+		var aktif = $(this);
+		var satirID = aktif.closest("tr").attr('id');
+		var dersAd = satirdakiDersAdiniGetirme(satirID);
+        if (confirm(dersAd + ' Dersini Silmek İstediğinizden Emin Misiniz?')) {
             $(this).parent('td').parent('tr').remove();
             ganoHesaplaYazdir();
         }
