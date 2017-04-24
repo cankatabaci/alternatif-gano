@@ -91,6 +91,9 @@ function ganoHesaplaYazdir() {
     $("#akts").text(tamamlananKredi);
 }
 
+
+
+
 chrome.storage.sync.get("parsed_courses", function (items) {
 
     $.getJSON("https://raw.githubusercontent.com/cankatabaci/ChromeEklenti-v1/master/src/course_ects.json", function (json) {
