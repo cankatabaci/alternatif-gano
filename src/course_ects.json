@@ -556,6 +556,1253 @@
         "course_ects": [
             6
         ]
-    }
-
+    },
+    {
+    	"course_code": "KIM 1311",
+    	"course_ects": [
+      	    5
+    	]
+    },
+    {
+    	"course_code": "MKT 1105",
+    	"course_ects": [
+      	2
+    	]
+    },    
+    {
+    "course_code": "YZM 1304",
+    "course_ects": [
+      3
+    	]
+    },
+    {
+    	"course_code": "MKT 1110",
+    	"course_ects": [
+      4
+    ]
+  },
+  {
+    "course_code": "MKT 1108",
+    "course_ects": [
+      5
+    ]
+  },
+  {
+    "course_code": "MTS 2201",
+    "course_ects": [
+      2
+    ]
+  },
+  {
+    "course_code": "MKT 2101",
+    "course_ects": [
+      5
+    ]
+  },
+  {
+    "course_code": "MKT 2103",
+    "course_ects": [
+      5
+    ]
+  },
+  {
+    "course_code": "MKT 2105",
+    "course_ects": [
+      4
+    ]
+  },
+  {
+    "course_code": "MKT 2107",
+    "course_ects": [
+      4
+    ]
+  },
+  {
+    "course_code": "MKT 2109",
+    "course_ects": [
+      4
+    ]
+  },
+  {
+    "course_code": "MKT 2111",
+    "course_ects": [
+      6
+    ]
+  },
+  {
+    "course_code": "MTS 2202",
+    "course_ects": [
+      2
+    ]
+  },
+  {
+    "course_code": "MKT 2102",
+    "course_ects": [
+      5
+    ]
+  },
+  {
+    "course_code": "MKT 2104",
+    "course_ects": [
+      5
+    ]
+  },
+  {
+    "course_code": "MKT 2106",
+    "course_ects": [
+      4
+    ]
+  },
+  {
+    "course_code": "MKT 2108",
+    "course_ects": [
+      4
+    ]
+  },
+  {
+    "course_code": "MKT 2110",
+    "course_ects": [
+      4
+    ]
+  },
+  {
+    "course_code": "MKT 2112",
+    "course_ects": [
+      6
+    ]
+  },
+  {
+    "course_code": "MKT 3101",
+    "course_ects": [
+      5
+    ]
+  },
+  {
+    "course_code": "MKT 3103",
+    "course_ects": [
+      5
+    ]
+  },
+  {
+    "course_code": "MKT 3105",
+    "course_ects": [
+      5
+    ]
+  },
+  {
+    "course_code": "MKT 3107",
+    "course_ects": [
+      4
+    ]
+  },
+  {
+    "course_code": "MKT 3109",
+    "course_ects": [
+      5
+    ]
+  },
+  {
+    "course_code": "MKT 3111",
+    "course_ects": [
+      4
+    ]
+  },
+  {
+    "course_code": "MKT 3102",
+    "course_ects": [
+      5
+    ]
+  },
+  {
+    "course_code": "MKT 3104",
+    "course_ects": [
+      5
+    ]
+  },
+  {
+    "course_code": "MKT 3106",
+    "course_ects": [
+      5
+    ]
+  },
+  {
+    "course_code": "MKT 3108",
+    "course_ects": [
+      4
+    ]
+  },
+  {
+    "course_code": "MKT 3110",
+    "course_ects": [
+      4
+    ]
+  },
+  {
+    "course_code": "MKT 3112",
+    "course_ects": [
+      5
+    ]
+  },
+  {
+    "course_code": "MTS 4201",
+    "course_ects": [
+      20
+    ]
+  },
+  {
+    "course_code": "MKT 4101",
+    "course_ects": [
+      5
+    ]
+  },
+  {
+    "course_code": "MKT 4103",
+    "course_ects": [
+      4
+    ]
+  },
+  {
+    "course_code": "MKT 4105",
+    "course_ects": [
+      1
+    ]
+  },
+  {
+    "course_code": "MKT 4102",
+    "course_ects": [
+      30
+    ]
+  },  
+  {
+    "course_code": "SSD 2201",
+    "course_ects": [
+      2
+    ]
+  },
+  {
+    "course_code": "SSD 2205",
+    "course_ects": [
+      2
+    ]
+  },
+  {
+    "course_code": "SSD 2207",
+    "course_ects": [
+      2
+    ]
+  },
+  {
+    "course_code": "SSD 2211",
+    "course_ects": [
+      2
+    ]
+  },
+  {
+    "course_code": "SSD 2213",
+    "course_ects": [
+      2
+    ]
+  },
+  {
+    "course_code": "SSD 2215",
+    "course_ects": [
+      2
+    ]
+  },
+  {
+    "course_code": "SSD 2217",
+    "course_ects": [
+      2
+    ]
+  },
+  {
+    "course_code": "SSD 2221",
+    "course_ects": [
+      2
+    ]
+  },
+  {
+    "course_code": "SSD 2219",
+    "course_ects": [
+      2
+    ]
+  },  
+  {
+    "course_code": "SSD 2202",
+    "course_ects": [
+      2
+    ]
+  },
+  {
+    "course_code": "SSD 2204",
+    "course_ects": [
+      2
+    ]
+  },
+  {
+    "course_code": "SSD 2208",
+    "course_ects": [
+      2
+    ]
+  },
+  {
+    "course_code": "SSD 2218",
+    "course_ects": [
+      2
+    ]
+  },
+  {
+    "course_code": "SSD 2220",
+    "course_ects": [
+      2
+    ]
+  },  
+  {
+    "course_code": "MKT 4218",
+    "course_ects": [
+      5
+    ]
+  },
+  {
+    "course_code": "MKT 4219",
+    "course_ects": [
+      5
+    ]
+  },
+  {
+    "course_code": "MKT 4220",
+    "course_ects": [
+      5
+    ]
+  },
+  {
+    "course_code": "MKT 4221",
+    "course_ects": [
+      5
+    ]
+  },
+  {
+    "course_code": "MKT 4222",
+    "course_ects": [
+      5
+    ]
+  },
+  {
+    "course_code": "MKT 4223",
+    "course_ects": [
+      5
+    ]
+  },
+  {
+    "course_code": "MKT 4224",
+    "course_ects": [
+      5
+    ]
+  },
+  {
+    "course_code": "MKT 4225",
+    "course_ects": [
+      5
+    ]
+  },
+  {
+    "course_code": "MKT 4226",
+    "course_ects": [
+      5
+    ]
+  },
+  {
+    "course_code": "MKT 4227",
+    "course_ects": [
+      5
+    ]
+  },
+  {
+    "course_code": "MKT 4228",
+    "course_ects": [
+      5
+    ]
+  },
+  {
+    "course_code": "MKT 4229",
+    "course_ects": [
+      5
+    ]
+  },
+  {
+    "course_code": "MKT 4230",
+    "course_ects": [
+      5
+    ]
+  },
+  {
+    "course_code": "MKT 4231",
+    "course_ects": [
+      5
+    ]
+  },
+  {
+    "course_code": "MKT 4232",
+    "course_ects": [
+      5
+    ]
+  },
+  {
+    "course_code": "MKT 4233",
+    "course_ects": [
+      5
+    ]
+  },
+  {
+    "course_code": "MKT 4234",
+    "course_ects": [
+      5
+    ]
+  },
+  {
+    "course_code": "MKT 4235",
+    "course_ects": [
+      5
+    ]
+  },
+  {
+    "course_code": "MKT 4236",
+    "course_ects": [
+      5
+    ]
+  },
+  {
+    "course_code": "MKT 4237",
+    "course_ects": [
+      5
+    ]
+  },
+  {
+    "course_code": "MKT 4201",
+    "course_ects": [
+      5
+    ]
+  },
+  {
+    "course_code": "MKT 4202",
+    "course_ects": [
+      5
+    ]
+  },
+  {
+    "course_code": "MKT 4203",
+    "course_ects": [
+      5
+    ]
+  },
+  {
+    "course_code": "MKT 4204",
+    "course_ects": [
+      5
+    ]
+  },
+  {
+    "course_code": "MKT 4205",
+    "course_ects": [
+      5
+    ]
+  },
+  {
+    "course_code": "MKT 4206",
+    "course_ects": [
+      5
+    ]
+  },
+  {
+    "course_code": "MKT 4207",
+    "course_ects": [
+      5
+    ]
+  },
+  {
+    "course_code": "MKT 4208",
+    "course_ects": [
+      5
+    ]
+  },
+  {
+    "course_code": "MKT 4209",
+    "course_ects": [
+      5
+    ]
+  },
+  {
+    "course_code": "MKT 4210",
+    "course_ects": [
+      5
+    ]
+  },
+  {
+    "course_code": "MKT 4211",
+    "course_ects": [
+      5
+    ]
+  },
+  {
+    "course_code": "MKT 4212",
+    "course_ects": [
+      5
+    ]
+  },
+  {
+    "course_code": "MKT 4213",
+    "course_ects": [
+      5
+    ]
+  },
+  {
+    "course_code": "MKT 4214",
+    "course_ects": [
+      5
+    ]
+  },
+  {
+    "course_code": "MKT 4215",
+    "course_ects": [
+      5
+    ]
+  },
+  {
+    "course_code": "MKT 4216",
+    "course_ects": [
+      5
+    ]
+  },
+  {
+    "course_code": "MKT 4217",
+    "course_ects": [
+      5
+    ]
+  },
+  {
+    "course_code": "KIM 1301",
+    "course_ects": [
+      5
+    ]
+  },
+  {
+    "course_code": "MIM 1101",
+    "course_ects": [
+      4
+    ]
+  },
+  {
+    "course_code": "MIM 1103",
+    "course_ects": [
+      2
+    ]
+  },
+  {
+    "course_code": "SSD 1200",
+    "course_ects": [
+      2
+    ]
+  },      
+  {
+    "course_code": "YZM 1302",
+    "course_ects": [
+      6
+    ]
+  },
+  {
+    "course_code": "MIM 1102",
+    "course_ects": [
+      4
+    ]
+  },
+  {
+    "course_code": "MIM 2101",
+    "course_ects": [
+      5
+    ]
+  },
+  {
+    "course_code": "MIM 2103",
+    "course_ects": [
+      5
+    ]
+  },
+  {
+    "course_code": "MIM 2105",
+    "course_ects": [
+      5
+    ]
+  },
+  {
+    "course_code": "MIM 2109",
+    "course_ects": [
+      5
+    ]
+  },
+  {
+    "course_code": "MIM 2107",
+    "course_ects": [
+      5
+    ]
+  },
+  {
+    "course_code": "MIM 2111",
+    "course_ects": [
+      5
+    ]
+  },
+  {
+    "course_code": "MIM 2108",
+    "course_ects": [
+      5
+    ]
+  },
+  {
+    "course_code": "MIM 2102",
+    "course_ects": [
+      5
+    ]
+  },
+  {
+    "course_code": "MIM 2104",
+    "course_ects": [
+      5
+    ]
+  },
+  {
+    "course_code": "MIM 2106",
+    "course_ects": [
+      5
+    ]
+  },
+  {
+    "course_code": "MIM 2110",
+    "course_ects": [
+      5
+    ]
+  },
+  {
+    "course_code": "MIM 2112",
+    "course_ects": [
+      5
+    ]
+  },
+  {
+    "course_code": "MIM 3101",
+    "course_ects": [
+      5
+    ]
+  },
+  {
+    "course_code": "MIM 3103",
+    "course_ects": [
+      5
+    ]
+  },
+  {
+    "course_code": "MIM 3105",
+    "course_ects": [
+      4
+    ]
+  },
+  {
+    "course_code": "MIM 3107",
+    "course_ects": [
+      4
+    ]
+  },
+  {
+    "course_code": "MIM 3111",
+    "course_ects": [
+      5
+    ]
+  },  
+  {
+    "course_code": "MIM 3109",
+    "course_ects": [
+      5
+    ]
+  },
+  {
+    "course_code": "MIM 3102",
+    "course_ects": [
+      5
+    ]
+  },
+  {
+    "course_code": "MIM 3104",
+    "course_ects": [
+      5
+    ]
+  },
+  {
+    "course_code": "MIM 3106",
+    "course_ects": [
+      4
+    ]
+  },
+  {
+    "course_code": "MIM 3108",
+    "course_ects": [
+      4
+    ]
+  },
+  {
+    "course_code": "MIM 3110",
+    "course_ects": [
+      5
+    ]
+  },
+  {
+    "course_code": "MIM 3112",
+    "course_ects": [
+      5
+    ]
+  },  
+  {
+    "course_code": "MIM 4201",
+    "course_ects": [
+      20
+    ]
+  },
+  {
+    "course_code": "MIM 4101",
+    "course_ects": [
+      5
+    ]
+  },
+  {
+    "course_code": "MIM 4103",
+    "course_ects": [
+      4
+    ]
+  },
+  {
+    "course_code": "MIM 4105",
+    "course_ects": [
+      1
+    ]
+  },
+  {
+    "course_code": "MIM 4102",
+    "course_ects": [
+      30
+    ]
+  },  
+  {
+    "course_code": "SSD 1201",
+    "course_ects": [
+      2
+    ]
+  },
+  {
+    "course_code": "SSD 1202",
+    "course_ects": [
+      2
+    ]
+  },
+  {
+    "course_code": "SSD 1203",
+    "course_ects": [
+      2
+    ]
+  },
+  {
+    "course_code": "SSD 1204",
+    "course_ects": [
+      2
+    ]
+  },
+  {
+    "course_code": "SSD 1205",
+    "course_ects": [
+      2
+    ]
+  },
+  {
+    "course_code": "SSD 1206",
+    "course_ects": [
+      2
+    ]
+  },
+  {
+    "course_code": "SSD 1207",
+    "course_ects": [
+      2
+    ]
+  },
+  {
+    "course_code": "SSD 1208",
+    "course_ects": [
+      2
+    ]
+  },
+  {
+    "course_code": "SSD 1209",
+    "course_ects": [
+      2
+    ]
+  },
+  {
+    "course_code": "SSD 1210",
+    "course_ects": [
+      2
+    ]
+  },
+  {
+    "course_code": "MIM 1104",
+    "course_ects": [
+      2
+    ]
+  },  
+  {
+    "course_code": "MIM 4201",
+    "course_ects": [
+      5
+    ]
+  },  
+  {
+    "course_code": "MIM 4202",
+    "course_ects": [
+      5
+    ]
+  },
+  {
+    "course_code": "MIM 4203",
+    "course_ects": [
+      5
+    ]
+  },
+  {
+    "course_code": "MIM 4204",
+    "course_ects": [
+      5
+    ]
+  },
+  {
+    "course_code": "MIM 4205",
+    "course_ects": [
+      5
+    ]
+  },
+  {
+    "course_code": "MIM 4206",
+    "course_ects": [
+      5
+    ]
+  },
+  {
+    "course_code": "MIM 4207",
+    "course_ects": [
+      5
+    ]
+  },
+  {
+    "course_code": "MIM 4208",
+    "course_ects": [
+      5
+    ]
+  },
+  {
+    "course_code": "MIM 4209",
+    "course_ects": [
+      5
+    ]
+  },
+  {
+    "course_code": "MIM 4210",
+    "course_ects": [
+      5
+    ]
+  },
+  {
+    "course_code": "MIM 4211",
+    "course_ects": [
+      5
+    ]
+  },
+  {
+    "course_code": "MIM 4212",
+    "course_ects": [
+      5
+    ]
+  },
+  {
+    "course_code": "MIM 4213",
+    "course_ects": [
+      5
+    ]
+  },
+  {
+    "course_code": "MIM 4214",
+    "course_ects": [
+      5
+    ]
+  },
+  {
+    "course_code": "MIM 4215",
+    "course_ects": [
+      5
+    ]
+  },
+  {
+    "course_code": "MIM 4216",
+    "course_ects": [
+      5
+    ]
+  },
+  {
+    "course_code": "MIM 4217",
+    "course_ects": [
+      5
+    ]
+  },
+  {
+    "course_code": "MIM 4218",
+    "course_ects": [
+      5
+    ]
+  },
+  {
+    "course_code": "MIM 4219",
+    "course_ects": [
+      5
+    ]
+  },
+  {
+    "course_code": "MIM 4220",
+    "course_ects": [
+      5
+    ]
+  },
+  {
+    "course_code": "KIM 1311",
+    "course_ects": [
+      5
+    ]
+  },
+  {
+    "course_code": "ESM 1103",
+    "course_ects": [
+      6
+    ]
+  },          
+  {
+    "course_code": "ESM 1102",
+    "course_ects": [
+      8
+    ]
+  },
+  {
+    "course_code": "ESM 1104",
+    "course_ects": [
+      1
+    ]
+  },
+  {
+    "course_code": "ESM 2101",
+    "course_ects": [
+      6
+    ]
+  },
+  {
+    "course_code": "ESM 2103",
+    "course_ects": [
+      5
+    ]
+  },
+  {
+    "course_code": "ESM 2105",
+    "course_ects": [
+      4
+    ]
+  },
+  {
+    "course_code": "ESM 2107",
+    "course_ects": [
+      4
+    ]
+  },
+  {
+    "course_code": "ESM 2109",
+    "course_ects": [
+      5
+    ]
+  },
+  {
+    "course_code": "ESM 2111",
+    "course_ects": [
+      2
+    ]
+  },
+  {
+    "course_code": "ESM 2113",
+    "course_ects": [
+      4
+    ]
+  },
+  {
+    "course_code": "ESM 2102",
+    "course_ects": [
+      5
+    ]
+  },
+  {
+    "course_code": "ESM 2104",
+    "course_ects": [
+      5
+    ]
+  },
+  {
+    "course_code": "ESM 2106",
+    "course_ects": [
+      5
+    ]
+  },
+  {
+    "course_code": "ESM 2108",
+    "course_ects": [
+      5
+    ]
+  },
+  {
+    "course_code": "ESM 2110",
+    "course_ects": [
+      5
+    ]
+  },
+  {
+    "course_code": "ESM 2112",
+    "course_ects": [
+      5
+    ]
+  },
+  {
+    "course_code": "ESM 3205",
+    "course_ects": [
+      5
+    ]
+  },  
+  {
+    "course_code": "ESM 3101",
+    "course_ects": [
+      6
+    ]
+  },
+  {
+    "course_code": "ESM 3103",
+    "course_ects": [
+      5
+    ]
+  },
+  {
+    "course_code": "ESM 3105",
+    "course_ects": [
+      4
+    ]
+  },
+  {
+    "course_code": "ESM 3107",
+    "course_ects": [
+      5
+    ]
+  },
+  {
+    "course_code": "ESM 3109",
+    "course_ects": [
+      3
+    ]
+  },
+  {
+    "course_code": "ESM 3200",
+    "course_ects": [
+      10
+    ]
+  },  
+  {
+    "course_code": "ESM 3102",
+    "course_ects": [
+      4
+    ]
+  },
+  {
+    "course_code": "ESM 3104",
+    "course_ects": [
+      4
+    ]
+  },
+  {
+    "course_code": "ESM 3106",
+    "course_ects": [
+      4
+    ]
+  },
+  {
+    "course_code": "ESM 3108",
+    "course_ects": [
+      3
+    ]
+  },
+  {
+    "course_code": "ESM 3110",
+    "course_ects": [
+      3
+    ]
+  },
+  {
+    "course_code": "ESM 4200",
+    "course_ects": [
+      20
+    ]
+  },
+  {
+    "course_code": "ESM 4101",
+    "course_ects": [
+      3
+    ]
+  },
+  {
+    "course_code": "ESM 4103",
+    "course_ects": [
+      4
+    ]
+  },
+  {
+    "course_code": "ESM 4105",
+    "course_ects": [
+      3
+    ]
+  },
+  {
+    "course_code": "ESM 4104 ",
+    "course_ects": [
+      30
+    ]
+  },  
+  {
+    "course_code": "ESM 3201",
+    "course_ects": [
+      5
+    ]
+  },
+  {
+    "course_code": "ESM 3203",
+    "course_ects": [
+      5
+    ]
+  },  
+  {
+    "course_code": "ESM 3202",
+    "course_ects": [
+      5
+    ]
+  },
+  {
+    "course_code": "ESM 3204",
+    "course_ects": [
+      5
+    ]
+  },
+  {
+    "course_code": "ESM 3206",
+    "course_ects": [
+      5
+    ]
+  },
+  {
+    "course_code": "ESM 3208",
+    "course_ects": [
+      5
+    ]
+  },
+  {
+    "course_code": "ESM 3210",
+    "course_ects": [
+      5
+    ]
+  },
+  {
+    "course_code": "ESM 3212",
+    "course_ects": [
+      5
+    ]
+  },
+  {
+    "course_code": "ESM 3214",
+    "course_ects": [
+      5
+    ]
+  },  
+  {
+    "course_code": "ESM 4201",
+    "course_ects": [
+      5
+    ]
+  },
+  {
+    "course_code": "ESM 4203",
+    "course_ects": [
+      5
+    ]
+  },
+  {
+    "course_code": "ESM 4205",
+    "course_ects": [
+      5
+    ]
+  },
+  {
+    "course_code": "ESM 4207",
+    "course_ects": [
+      5
+    ]
+  },
+  {
+    "course_code": "ESM 4209",
+    "course_ects": [
+      5
+    ]
+  },
+  {
+    "course_code": "ESM 4211",
+    "course_ects": [
+      5
+    ]
+  },
+  {
+    "course_code": "ESM 4213",
+    "course_ects": [
+      5
+    ]
+  },
+  {
+    "course_code": "ESM 4215",
+    "course_ects": [
+      5
+    ]
+  },
+  {
+    "course_code": "ESM 4217",
+    "course_ects": [
+      5
+    ]
+  },
+  {
+    "course_code": "ESM 4219",
+    "course_ects": [
+      5
+    ]
+  },
+  {
+    "course_code": "ESM 4221",
+    "course_ects": [
+      5
+    ]
+  },
+  {
+    "course_code": "ESM 4223",
+    "course_ects": [
+      5
+    ]
+  }
 ]
