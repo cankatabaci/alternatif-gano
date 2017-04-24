@@ -149,6 +149,9 @@ $(document).ready(function () {
         tabloyaDersEkle(kod, name, id + 1);
         alert("Yeni Ders Satırı Eklenmiştir");
     });
+	
+	$('#yenile').click(function(){
+		location.reload();
+	});
 
 });
-
