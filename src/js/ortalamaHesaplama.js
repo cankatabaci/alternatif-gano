@@ -47,7 +47,7 @@ function tabloyaDersEkle(course_code, course_name, index) {
             .append($('<td>').append(course_name_html))
             .append($('<td>').append(course_credits_html))
             .append($('<td>').append(course_grades_html))
-            .append($('<td>').append('<a href="#" class="silinicekSatir">Sil</a>'))
+            .append($('<td>').append('<input color="black" class="silinicekSatir" type="button" value="Sil">'))
         );
 }
 let VALID_GRADES = ["AA", "BA", "BB", "CB", "CC", "DC", "DD", "FD", "FF"];
