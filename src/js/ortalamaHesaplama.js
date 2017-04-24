@@ -1,4 +1,4 @@
-function notlarComboBoxOlustur(index) {
+﻿function notlarComboBoxOlustur(index) {
     let not_cb_html = '<select id="not' + index + '" class="form-control">' +
         '<option >Seçiniz</option>' +
         '<option value="4.0">AA</option>' +
@@ -148,3 +148,4 @@ $(document).ready(function () {
     });
 
 });
+
