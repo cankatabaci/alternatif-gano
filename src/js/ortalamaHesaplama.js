@@ -108,19 +108,21 @@ chrome.storage.sync.get("parsed_courses", function (items) {
                 let course_code = parsed_courses[index].course_code;
                 let course_name = parsed_courses[index].course_name;
                 tabloyaDersEkle(course_code, course_name, satirIndisi);
-                satirIndisi++;
+
                 
                 let course_credit = dersKredisiniGetir(all_courses, course_code);
 
-                $("#not" + index + " option").filter(function () { // selecting grade options based on its text
+                $("#not" + satirIndisi + " option").filter(function () { // selecting grade options based on its text
                     return $(this).text() === parsed_courses[index].course_grade;
                 }).prop("selected", true);
 
-                $("#kredi" + index + " option").filter(function () { // selecting credits options based on its text
+                $("#kredi" + satirIndisi + " option").filter(function () { // selecting credits options based on its text
                     return $(this).text() === course_credit.toString();
                 }).prop("selected", true);
 
                 ganoHesaplaYazdir();
+
+                satirIndisi++;
             } else {
                 console.log(parsed_courses[index].course_grade);
             }
