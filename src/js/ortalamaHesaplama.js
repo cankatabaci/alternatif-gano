@@ -48,7 +48,7 @@ function tabloyaDersEkle(course_code, course_name, index) {
             .append($('<td>').append(course_name_html))
             .append($('<td>').append(course_credits_html))
             .append($('<td>').append(course_grades_html))
-            .append($('<td>').append('<input color="black" class="silinicekSatir" type="button" value="Sil">'))
+            .append($('<td>').append('<input color="black" class="btn btn-default" id="silinicekSatir" type="button" value="Sil">'))
         );
 }
 let VALID_GRADES = ["AA", "BA", "BB", "CB", "CC", "DC", "DD", "FD", "FF"];
@@ -143,7 +143,7 @@ $(document).ready(function () {
     });
 
 	
-    $('#not_tablosu').on('click', '.silinicekSatir', function () {
+    $('#not_tablosu').on('click', '#silinicekSatir', function () {
         let aktif = $(this);
         let satirID = aktif.closest("tr").attr('id');
         let dersAd = satirdakiDersAdiniGetirme(satirID);
