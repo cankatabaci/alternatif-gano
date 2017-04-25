@@ -142,6 +142,41 @@ $(document).ready(function () {
         ganoHesaplaYazdir();
     });
 
+$('#renk').click(function () {
+    var table = document.getElementById('not_tablosu');
+    var rowLength = table.rows.length;
+    var dersler = {};
+
+    for (var i = 0; i < rowLength; i += 1) {
+        let dersAdi = satirdakiDersAdiniGetirme(i);
+
+        console.log("dersAdi: " + dersAdi);
+
+        if (dersler[dersAdi]) {
+            let satirlar = dersler[dersAdi];
+            satirlar.push(i);
+            dersler[dersAdi] = satirlar;
+        } else {
+            dersler[dersAdi] = [i];
+        }
+    }
+    console.log(dersler);
+
+
+    for (var j = 0; j < rowLength; j += 1) {
+        let dersAdi1 = satirdakiDersAdiniGetirme(j);
+        if (dersler[dersAdi1].length > 1) {
+            let tekrarDersIdler = dersler[dersAdi1];
+
+            for (var i = 0; i < tekrarDersIdler.length; i++) {
+                //burada tekrarDersIdler[i] bize geriye tekrar edenleri döndürecek
+				$('#'+tekrarDersIdler[i]).children('td, th').css('background-color','yellow');
+            }
+        }
+
+    }
+
+	});
 	
     $('#not_tablosu').on('click', '#silinicekSatir', function () {
         let aktif = $(this);
