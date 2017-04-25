@@ -109,7 +109,7 @@ chrome.storage.sync.get("parsed_courses", function (items) {
                 let course_name = parsed_courses[index].course_name;
                 tabloyaDersEkle(course_code, course_name, satirIndisi);
 
-                
+
                 let course_credit = dersKredisiniGetir(all_courses, course_code);
 
                 $("#not" + satirIndisi + " option").filter(function () { // selecting grade options based on its text
@@ -142,42 +142,46 @@ $(document).ready(function () {
         ganoHesaplaYazdir();
     });
 
-$('#renk').click(function () {
-    var table = document.getElementById('not_tablosu');
-    var rowLength = table.rows.length;
-    var dersler = {};
+    $('#renk').click(function () {
+        let table = document.getElementById('not_tablosu');
+        let rowLength = table.rows.length;
+        let dersler = {};
 
-    for (var i = 0; i < rowLength; i += 1) {
-        let dersAdi = satirdakiDersAdiniGetirme(i);
+        for (let i = 0; i < rowLength; i += 1) {
+            let dersAdi = satirdakiDersAdiniGetirme(i);
 
-        console.log("dersAdi: " + dersAdi);
+            console.log("dersAdi: " + dersAdi);
 
-        if (dersler[dersAdi]) {
-            let satirlar = dersler[dersAdi];
-            satirlar.push(i);
-            dersler[dersAdi] = satirlar;
-        } else {
-            dersler[dersAdi] = [i];
-        }
-    }
-    console.log(dersler);
-
-
-    for (var j = 0; j < rowLength; j += 1) {
-        let dersAdi1 = satirdakiDersAdiniGetirme(j);
-        if (dersler[dersAdi1].length > 1) {
-            let tekrarDersIdler = dersler[dersAdi1];
-
-            for (var i = 0; i < tekrarDersIdler.length; i++) {
-                //burada tekrarDersIdler[i] bize geriye tekrar edenleri döndürecek
-				$('#'+tekrarDersIdler[i]).children('td, th').css('background-color','rgba(255, 0, 0, 0.6)');
+            if (dersler[dersAdi]) {
+                let satirlar = dersler[dersAdi];
+                satirlar.push(i);
+                dersler[dersAdi] = satirlar;
+            } else {
+                dersler[dersAdi] = [i];
             }
         }
+        console.log(dersler);
 
-    }
+        let back = ["rgba(255, 0, 0, 0.3)", "rgba(0, 255, 0, 0.3)", "rgba(0, 0, 255, 0.3)", "rgba(255, 255, 0, 0.3)", "rgba(0, 255, 255, 0.3)"];
 
-	});
-	
+        for (let j = 0; j < rowLength; j += 1) {
+            let dersAdi1 = satirdakiDersAdiniGetirme(j);
+            if (dersler[dersAdi1].length > 1) {
+                let tekrarDersIdler = dersler[dersAdi1];
+
+                let rand = back[Math.floor(Math.random() * back.length)];
+                console.log(rand);
+
+                for (let i = 0; i < tekrarDersIdler.length; i++) {
+                    //burada tekrarDersIdler[i] bize geriye tekrar edenleri döndürecek
+                    $('#' + tekrarDersIdler[i]).children('td, th').css('background-color', rand);
+                }
+            }
+
+        }
+
+    });
+
     $('#not_tablosu').on('click', '#silinicekSatir', function () {
         let aktif = $(this);
         let satirID = aktif.closest("tr").attr('id');
