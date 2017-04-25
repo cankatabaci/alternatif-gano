@@ -140,7 +140,7 @@ $(document).ready(function () {
         ganoHesaplaYazdir();
     });
 
-
+	
     $('#not_tablosu').on('click', '.silinicekSatir', function () {
         let aktif = $(this);
         let satirID = aktif.closest("tr").attr('id');
