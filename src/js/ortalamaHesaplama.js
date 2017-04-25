@@ -170,7 +170,7 @@ $('#renk').click(function () {
 
             for (var i = 0; i < tekrarDersIdler.length; i++) {
                 //burada tekrarDersIdler[i] bize geriye tekrar edenleri döndürecek
-				$('#'+tekrarDersIdler[i]).children('td, th').css('background-color','yellow');
+				$('#'+tekrarDersIdler[i]).children('td, th').css('background-color','rgba(255, 0, 0, 0.6)');
             }
         }
 
