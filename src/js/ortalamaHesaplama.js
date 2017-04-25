@@ -191,7 +191,7 @@ $('#renk').click(function () {
     $('#btn').click(function () {
         let kod = "Eklenen";
         let name = "";
-        let id = $('#not_tablosu tr:last').attr('id');
+        let id = parseInt($('#not_tablosu tr:last').attr('id'));
 
         tabloyaDersEkle(kod, name, id + 1);
         alert("Yeni Ders Satırı Eklenmiştir");
