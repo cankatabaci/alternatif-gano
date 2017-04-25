@@ -99,14 +99,17 @@ chrome.storage.sync.get("parsed_courses", function (items) {
         let all_courses = json;
         let parsed_courses = items.parsed_courses;
 
+        let satirIndisi = 0;
+
         for (index = 0; index < parsed_courses.length; ++index) {
 
             if (VALID_GRADES.includes(parsed_courses[index].course_grade.toString()) || parsed_courses[index].course_grade.toString() === "A") {
 
                 let course_code = parsed_courses[index].course_code;
                 let course_name = parsed_courses[index].course_name;
-                tabloyaDersEkle(course_code, course_name, index);
-
+                tabloyaDersEkle(course_code, course_name, satirIndisi);
+                satirIndisi++;
+                
                 let course_credit = dersKredisiniGetir(all_courses, course_code);
 
                 $("#not" + index + " option").filter(function () { // selecting grade options based on its text
