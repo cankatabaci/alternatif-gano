@@ -4,7 +4,8 @@ $(function () {
     $(".accordion-toggle").each(function () {
         let course_code = $(this).find("td").eq(1).text();
         let course_name = $(this).find("td").eq(2).text();
-
+		
+		course_name = course_name.trim();
         let course_grade = $(this).find("td").eq(6).text();
 
         courses.push({

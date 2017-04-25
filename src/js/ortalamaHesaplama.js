@@ -136,21 +136,21 @@ function satirdakiDersAdiniGetirme(satirID) {
     return $("#" + degisken).val();
 }
 
-$(document).ready(function () {
+function satirdakiDersinNotunuGetirme(satirID){
+	let degisken = "not" + satirID;
+	return $("#" + degisken).val();
+}
 
-    $('#not_tablosu').on('click', 'select', function () {
-        ganoHesaplaYazdir();
-    });
-
-    $('#renk').click(function () {
-        let table = document.getElementById('not_tablosu');
+function renklendir(){
+	console.log("renklendir çağırıldı");
+	        let table = document.getElementById('not_tablosu');
         let rowLength = table.rows.length;
         let dersler = {};
 
         for (let i = 0; i < rowLength; i += 1) {
             let dersAdi = satirdakiDersAdiniGetirme(i);
 
-            console.log("dersAdi: " + dersAdi);
+            
 
             if (dersler[dersAdi]) {
                 let satirlar = dersler[dersAdi];
@@ -160,7 +160,7 @@ $(document).ready(function () {
                 dersler[dersAdi] = [i];
             }
         }
-        console.log(dersler);
+        
 
         let back = ["rgba(255, 0, 0, 0.3)", "rgba(0, 255, 0, 0.3)", "rgba(0, 0, 255, 0.3)", "rgba(255, 255, 0, 0.3)", "rgba(0, 255, 255, 0.3)"];
 
@@ -170,7 +170,7 @@ $(document).ready(function () {
                 let tekrarDersIdler = dersler[dersAdi1];
 
                 let rand = back[Math.floor(Math.random() * back.length)];
-                console.log(rand);
+                
 
                 for (let i = 0; i < tekrarDersIdler.length; i++) {
                     //burada tekrarDersIdler[i] bize geriye tekrar edenleri döndürecek
@@ -179,8 +179,24 @@ $(document).ready(function () {
             }
 
         }
+		
+		for (let k = 0; k< rowLength; k+=1)
+		{
+			let not = satirdakiDersinNotunuGetirme(k);
+			if(not == 0.0 || not == 0.5)
+			{
+				$('#' + k).children('td, th').css('background-color', 'rgba(255, 0, 0, 0.6)');
+			}
+		}
+}
 
+$(document).ready(function () {
+
+    $('#not_tablosu').on('click', 'select', function () {
+        ganoHesaplaYazdir();
     });
+	
+
 
     $('#not_tablosu').on('click', '#silinicekSatir', function () {
         let aktif = $(this);
@@ -205,5 +221,7 @@ $(document).ready(function () {
     $('#yenile').click(function () {
         location.reload();
     });
+	
+	renklendir();
 
 });
