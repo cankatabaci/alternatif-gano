@@ -103,7 +103,7 @@ chrome.storage.sync.get("parsed_courses", function (items) {
 
         for (index = 0; index < parsed_courses.length; ++index) {
 
-            if (VALID_GRADES.includes(parsed_courses[index].course_grade.toString()) || parsed_courses[index].course_grade.toString() === "A") {
+            if (VALID_GRADES.includes(parsed_courses[index].course_grade.toString()) || parsed_courses[index].course_grade.toString() === "A" || parsed_courses[index].course_grade.toString() === "B" || parsed_courses[index].course_grade.toString() === "C") {
 
                 let course_code = parsed_courses[index].course_code;
                 let course_name = parsed_courses[index].course_name;
@@ -124,7 +124,7 @@ chrome.storage.sync.get("parsed_courses", function (items) {
 
                 satirIndisi++;
             } else {
-                console.log(parsed_courses[index].course_grade);
+                console.log("Hesaplamaya katılmayan not: " + parsed_courses[index].course_grade);
             }
         }
 
@@ -144,7 +144,6 @@ function satirdakiDersinNotunuGetirme(satirID) {
 }
 
 function renklendir() {
-    console.log("renklendir çağırıldı");
     let table = document.getElementById('not_tablosu');
     let rowLength = table.rows.length;
     let dersler = {};
@@ -184,7 +183,6 @@ function renklendir() {
         let not = parseFloat(satirdakiDersinNotunuGetirme(k));
 
         if (not === 0.0 || not === 0.5) {
-            console.log(not);
             $('#' + k).children('td, th').css('background-color', 'rgba(255, 0, 0, 0.8)');
         }
     }
