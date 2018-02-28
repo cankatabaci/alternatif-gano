@@ -1,5 +1,5 @@
 ### MCBÜ Alternatif GANO Hesaplama Eklentisi
-##### Hizli ve kolay not ortalama hesaplama eklentisi.
+##### Hizli ve kolay ortalama hesaplama eklentisi.
 ##### Ders adları ve kredileri otomatik olarak seçilir.
 
 Chrome Web Store üzerinden yüklemek için [tıklayınız.](https://chrome.google.com/webstore/detail/alternatif-gano/ceoddimenclckfmdabaiipmmbhgdilnl) 
